@@ -1,0 +1,100 @@
+body {
+  font-family: Lato, "Lucida Console", Monaco, monospace;
+}
+
+.vertical-center {
+  min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+  min-height: 100vh; /* These two lines are counted as one :-)       */
+  display: -webkit-box;  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+  display: -ms-flexbox;  /* TWEENER - IE 10 */
+  display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+  display: flex;         /* NEW, Spec - Firefox, Chrome, Opera */
+  align-items: center;
+}
+
+#chart {
+    z-index: 0;
+    width: 500px;
+    height: 500px;
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.navbar .navbar-nav {
+  display: inline-block;
+  float: none;
+}
+
+.navbar .navbar-collapses {
+  text-align: center;
+}
+
+.navbar-nav > li > a, .navbar-brand {
+  padding-top:0.6vh !important;
+  padding-bottom:0 !important;
+  height: 3vh;
+}
+
+.navbar {
+  min-height:3vh !important;
+}
+
+html, body, .nameContainer {
+  height: 99%;
+}
+
+.nameContainer {
+  color: #eeeeee;
+  text-shadow: 2px 2px #cccccc;
+  display: -webkit-box;  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+  display: -ms-flexbox;  /* TWEENER - IE 10 */
+  display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+  display: flex;         /* NEW, Spec - Firefox, Chrome, Opera */
+  align-items: center;
+  -webkit-align-items: center;
+  justify-content: center;
+  -webkit-justify-content: center;
+  font-size: 30px;
+  font-size: 12vw;
+}
+
+/*@media (max-width: 1000px) {*/
+  #name {
+    z-index: 1;
+  }
+/*}*/
+
+form {
+  position: absolute;
+  top: 1em;
+  left: 1em;
+}
+
+path {
+  fill-rule: evenodd;
+  stroke: #000000;
+  stroke-width: 2px;
+}
+
+.sun path {
+  fill: #cc8080;
+}
+
+.planet path {
+  fill: #990000;
+}
+
+.annulus path {
+  fill: #c26666;
+}
+
+#back {
+  text-decoration: none;
+  font-size: 1.2vw;
+  color: #555555;
+  text-shadow: 1px 1px #cccccc;
+}

@@ -1,0 +1,206 @@
+body {
+  font-family: Lato, "Lucida Console", Monaco, monospace;
+  background: url(../imgs/texture-noise.png);
+}
+
+.mouse-ignore {
+  pointer-events: none;
+}
+
+.cursor-hand {
+  cursor: pointer;
+  cursor: hand;
+}
+
+#gear-wrapper {
+  position: absolute;
+  display: none;
+  z-index: 0;
+  width: 500px; height: 500px;
+  top: 0; bottom: 0; left: 0; right: 0;
+  margin: auto;
+}
+
+img.displayed {
+  width: 250px; /*fall back width*/
+  display: block;
+  margin-left: auto; margin-right: auto
+}
+
+img.shadowed {
+    -webkit-filter: drop-shadow(12px 12px 25px rgba(0, 0, 0, 0.5));
+    filter: url("data:image/svg+xml;utf8,<svg height='0' xmlns='http://www.w3.org/2000/svg'><filter id='drop-shadow'><feGaussianBlur in='SourceAlpha' stdDeviation='4'/><feOffset dx='12' dy='12' result='offsetblur'/><feFlood flood-color='rgba(0,0,0,0.5)'/><feComposite in2='offsetblur' operator='in'/><feMerge><feMergeNode/><feMergeNode in='SourceGraphic'/></feMerge></filter></svg>#drop-shadow");
+    -ms-filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')";
+    filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')";
+}
+
+.navbar .navbar-nav { /*border: 1px solid green;*/
+  display: inline-block;
+  float: none;
+}
+
+.navbar .navbar-collapses { /*border: 1px solid red;*/ /*box-shadow: inset 0 0 1px #0f0;*/
+  text-align: center;
+}
+
+.navbar-nav > li > a { /*border: 1px solid blue;*/
+  padding-top:0.6vh !important;
+  padding-bottom:0 !important;
+  height: 3vh;
+}
+
+.navbar {
+  min-height: 3vh !important;
+}
+
+#name {
+  color: #eee;
+  text-shadow: 2px 2px #ccc;
+  font-size: 12vw;
+  position: absolute;
+  text-align: center;
+  width: 90vw; height: 20vh;
+  line-height: 20vh;
+  margin: 40vh 5vw;
+  padding: 0;
+}
+
+#fireworks { /*border: red 1px dashed;*/
+  color: #e8e8e8;
+  /*text-shadow: 1px 1px #ccc;*/
+  font-size: 3vmin;
+  float:right;
+  text-align: center;
+  width: 20vmin; height: 6vmin;
+  line-height: 6vmin;
+  padding: 0;
+}
+
+.blueShadow {
+  text-shadow: 1px 1px red;
+}
+
+#down-arrow-wrapper {
+  position: absolute;
+  z-index: 9000;
+  color: rgba(0, 0, 0, 0.5);
+  text-align: center;
+  font-size: 4vw;
+  width: 8vw; height: 16vh;
+  line-height: 16vh;
+  margin: 79vh 46vw 5vh 46vw;
+  padding: 0;
+}
+
+#down-arrow:hover {
+  cursor: pointer;
+  cursor: hand;
+}
+
+circle {
+  stroke: #000;
+  stroke-opacity: .5;
+}
+
+path {
+  fill-rule: evenodd;
+  stroke: #bbb;
+  stroke-width: 1px;
+}
+
+.sun path {
+  fill: hsla(202, 57%, 95%, 0.5);
+}
+
+.planet path {
+  fill: hsla(201, 53%, 95%, 0.5);
+}
+
+.annulus path {
+  fill: hsla(209, 56%, 95%, 0.5);
+}
+
+.card-divider {
+  height: 10vmin; width: 100%;
+  line-height: 10vmin;
+  margin-bottom: 20px;
+  color: white;
+  background-color:#c6dbef;
+  text-align: center;
+  font-size: 8vmin;
+}
+
+.card {
+  width: 100%;
+  border: 1px solid #eee;
+  box-shadow:0px 7px 10px #ccc;
+  background-color: rgba(248,248,248,0.5);
+  margin-bottom: 40px;
+  padding: 10px;
+}
+
+.card-header-wrapper {
+  text-align:center;
+  margin-bottom:10px;
+}
+
+.card-header {
+  display:inline-block;
+  padding: 0 5px;
+  border-radius: 4px;
+  color: white !important;
+  font-size: 4vmin;
+  background-color:#eaeaea !important;
+}
+
+.card-header-arrow-up {
+  display: none;
+  color: rgba(0, 0, 0, 0.5);
+  margin-right: 20px;
+  margin-left: 20px;
+  font-size:4vmin;
+}
+
+.card-header-arrow-down {
+  display: none;
+  color: rgba(0, 0, 0, 0.5);
+  margin-right: 20px;
+  margin-left: 20px;
+  font-size:4vmin;
+}
+
+.card-text {
+  display: none;
+  text-align: center;
+}
+
+.card table {
+  width: 100%;
+}
+
+#footer-bar {
+  margin-top: 3vh;
+  height: 2px;
+  background-image: none;
+  background-color: #c6dbef;
+}
+
+#footer {
+  height: auto;
+  padding-top: 0;
+  background-image: none;
+  color: #6baed6;
+  background: -webkit-linear-gradient(white, #eee); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(white, #eee); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(white, #eee); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(white, #eee); /* Standard syntax */
+}
+
+#footer > div > .row > div > dl > dt {
+  color: black;
+}
+
+#footer > div > .row > div > dl > dd > a {
+  color: inherit;
+  text-decoration: none;
+}
