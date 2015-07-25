@@ -1,217 +1,3 @@
-var navHeight,
-    thomas_arrowState = '.card-header-arrow-down', thomas_arrowStateNeg = '.card-header-arrow-up',
-    rice_arrowState = '.card-header-arrow-down', rice_arrowStateNeg = '.card-header-arrow-up',
-    disco_arrowState = '.card-header-arrow-down', disco_arrowStateNeg = '.card-header-arrow-up',
-    hcya_arrowState = '.card-header-arrow-down', hcya_arrowStateNeg = '.card-header-arrow-up',
-    brevitest_arrowState = '.card-header-arrow-down', brevitest_arrowStateNeg = '.card-header-arrow-up',
-    $nav = $('nav'),
-    $downArrowWrapper = $("#down-arrow-wrapper"),
-    $downArrow = $("#down-arrow"),
-    $gearWrapper = $('#gear-wrapper'),
-    $body = $('body'),
-    $gap = $('#main-page-margin'),
-    paddingTop;
-
-    navHeight = ($( window ).height() - $nav.outerHeight());
-    $gap.css('height', navHeight);
-    $downArrowWrapper.effect( 'bounce', { times: 3 }, 1000);
-
-$(window).on('scroll touchmove', function () {
-    if ($(window).scrollTop() > navHeight) {
-        document.styleSheets[3].disabled = false;
-        paddingTop = parseFloat($nav.outerHeight() + 20);
-        $nav.addClass('navbar-fixed-top');
-        $body.css('padding-top', paddingTop + 'px');
-    } else {
-        document.styleSheets[3].disabled = true;
-        $nav.removeClass('navbar-fixed-top');
-        $body.css('padding-top', 0);
-    }
-
-    if ($(window).scrollTop() > ((3/4)*navHeight)) {
-        $gearWrapper.show();
-    } else {
-        $gearWrapper.hide();
-    }
-
-    if ($(window).scrollTop() !== 0) {
-        $downArrowWrapper.hide();
-    } else {
-        $downArrowWrapper.show();
-        $downArrowWrapper.effect( 'bounce', { times: 3 }, 800);
-    }
-});
-
-var $thomasCardTxtWrapper = $('#thomas-card-text-wrapper'), $thomasCardTxt = $('#thomas-card-text'),
-    $riceCardTxtWrapper = $('#rice-card-text-wrapper'), $riceCardTxt = $('#rice-card-text'),
-    $discoCardTxtWrapper = $('#disco-card-text-wrapper'), $discoCardTxt = $('#disco-card-text'),
-    $hcyaCardTxtWrapper = $('#hcya-card-text-wrapper'), $hcyaCardTxt = $('#hcya-card-text'),
-    $brevitestCardTxtWrapper = $('#brevitest-card-text-wrapper'), $brevitestCardTxt = $('#brevitest-card-text');
-
-$thomasCardTxtWrapper.on({
-  mouseenter: function () {
-    $(thomas_arrowState, '#thomas').show();
-    $thomasCardTxtWrapper.toggleClass('cursor-hand');
-  },
-  mouseleave: function () {
-    $(thomas_arrowState, '#thomas').hide();
-    $thomasCardTxtWrapper.toggleClass('cursor-hand');
-  }
-});
-
-$thomasCardTxtWrapper.on('click', function () {
-  $thomasCardTxt.slideToggle(200, function () {
-    if ($thomasCardTxt.is(':visible')) {
-      thomas_arrowState = '.card-header-arrow-up';
-      thomas_arrowStateNeg = '.card-header-arrow-down';
-    }
-    else {
-      thomas_arrowState = '.card-header-arrow-down';
-      thomas_arrowStateNeg = '.card-header-arrow-up';
-    }
-    $(thomas_arrowState, '#thomas').show();
-    $(thomas_arrowStateNeg, '#thomas').hide();
-  });
-});
-
-$riceCardTxtWrapper.on({
-  mouseenter: function () {
-    $(rice_arrowState, '#rice').show();
-    $riceCardTxtWrapper.toggleClass('cursor-hand');
-  },
-  mouseleave: function () {
-    $(rice_arrowState, '#rice').hide();
-    $riceCardTxtWrapper.toggleClass('cursor-hand');
-  }
-});
-
-$riceCardTxtWrapper.on('click', function () {
-  $riceCardTxt.slideToggle(200, function () {
-    if ($riceCardTxt.is(':visible')) {
-      rice_arrowState = '.card-header-arrow-up';
-      rice_arrowStateNeg = '.card-header-arrow-down';
-    }
-    else {
-      rice_arrowState = '.card-header-arrow-down';
-      rice_arrowStateNeg = '.card-header-arrow-up';
-    }
-    $(rice_arrowState, '#rice').show();
-    $(rice_arrowStateNeg, '#rice').hide();
-  });
-});
-
-$discoCardTxtWrapper.on({
-  mouseenter: function () {
-    $(disco_arrowState, '#disco').show();
-    $discoCardTxtWrapper.toggleClass('cursor-hand');
-  },
-  mouseleave: function () {
-    $(disco_arrowState, '#disco').hide();
-    $discoCardTxtWrapper.toggleClass('cursor-hand');
-  }
-});
-
-$discoCardTxtWrapper.on('click', function () {
-  $discoCardTxt.slideToggle(200, function () {
-    if ($discoCardTxt.is(':visible')) {
-      disco_arrowState = '.card-header-arrow-up';
-      disco_arrowStateNeg = '.card-header-arrow-down';
-    }
-    else {
-      disco_arrowState = '.card-header-arrow-down';
-      disco_arrowStateNeg = '.card-header-arrow-up';
-    }
-    $(disco_arrowState, '#disco').show();
-    $(disco_arrowStateNeg, '#disco').hide();
-  });
-});
-
-$hcyaCardTxtWrapper.on({
-  mouseenter: function () {
-    $(hcya_arrowState, '#hcya').show();
-    $hcyaCardTxtWrapper.toggleClass('cursor-hand');
-  },
-  mouseleave: function () {
-    $(hcya_arrowState, '#hcya').hide();
-    $hcyaCardTxtWrapper.toggleClass('cursor-hand');
-  }
-});
-
-$hcyaCardTxtWrapper.on('click', function () {
-  $hcyaCardTxt.slideToggle(200, function () {
-    if ($hcyaCardTxt.is(':visible')) {
-      hcya_arrowState = '.card-header-arrow-up';
-      hcya_arrowStateNeg = '.card-header-arrow-down';
-    }
-    else {
-      hcya_arrowState = '.card-header-arrow-down';
-      hcya_arrowStateNeg = '.card-header-arrow-up';
-    }
-    $(hcya_arrowState, '#hcya').show();
-    $(hcya_arrowStateNeg, '#hcya').hide();
-  });
-});
-
-$brevitestCardTxtWrapper.on({
-  mouseenter: function () {
-    $(brevitest_arrowState, '#brevitest').show();
-    $brevitestCardTxtWrapper.toggleClass('cursor-hand');
-  },
-  mouseleave: function () {
-    $(brevitest_arrowState, '#brevitest').hide();
-    $brevitestCardTxtWrapper.toggleClass('cursor-hand');
-  }
-});
-
-$brevitestCardTxtWrapper.on('click', function () {
-  $brevitestCardTxt.slideToggle(200, function () {
-    if ($brevitestCardTxt.is(':visible')) {
-      brevitest_arrowState = '.card-header-arrow-up';
-      brevitest_arrowStateNeg = '.card-header-arrow-down';
-    }
-    else {
-      brevitest_arrowState = '.card-header-arrow-down';
-      brevitest_arrowStateNeg = '.card-header-arrow-up';
-    }
-    $(brevitest_arrowState, '#brevitest').show();
-    $(brevitest_arrowStateNeg, '#brevitest').hide();
-  });
-});
-
-$downArrow.on('mouseenter', function(e) {
-    $downArrowWrapper.effect( 'bounce', { times: 3 }, 800);
-});
-
-$downArrowWrapper.on('click', function(e) {
-    $('html, body').animate({
-        scrollTop: navHeight + 1
-    }, 600);
-});
-
-$(document).on('click','#education-nav-btn', function(e) {
-    $('html, body').animate({
-        scrollTop: navHeight + 2
-    }, 800);
-});
-
-$(document).on('click','#extracurricular-nav-btn', function(e) {
-    $('html, body').animate({
-        scrollTop: $("#extracurricular").offset().top - $nav.outerHeight() - 20
-    }, 800);
-});
-
-$(document).on('click','#experience-nav-btn', function(e) {
-    $('html, body').animate({
-        scrollTop: $("#experience").offset().top - $nav.outerHeight() - 20
-    }, 800);
-});
-
-setInterval(function() {
-    if($downArrowWrapper.is(':visible') &&  !($downArrow.is(":hover"))) {
-        $downArrowWrapper.effect( 'bounce', { times: 3 }, 800);
-    }
-}, 10000);
-
 var forceLayout;
 (forceLayout = function (fireworks) {
   var width = $(window).width(),
@@ -427,23 +213,181 @@ var gearLayout;
     });
 })();
 
-$(window).on('resize', function() {
-    navHeight = ($( window ).height() - $('nav').outerHeight());
-    $('#main-page-margin').css('height', navHeight);
-    $( "#force" ).empty();
-    $( "#gear-wrapper" ).empty();
-    forceLayout();
-    gearLayout();
-});
+(function () {
+    var app = {
+        thomasArrowState: {
+            pos: '.card-header-arrow-down',
+            neg: '.card-header-arrow-up',
+            context: '#thomas'
+        },
+        riceArrowState: {
+            pos: '.card-header-arrow-down',
+            neg: '.card-header-arrow-up',
+            context: '#rice'
+        },
+        discoArrowState: {
+            pos: '.card-header-arrow-down',
+            neg: '.card-header-arrow-up',
+            context: '#disco'
+        },
+        hcyaArrowState: {
+            pos: '.card-header-arrow-down',
+            neg: '.card-header-arrow-up',
+            context: '#hcya'
+        },
+        brevitestArrowState: {
+            pos: '.card-header-arrow-down',
+            neg: '.card-header-arrow-up',
+            context: '#brevitest'
+        },
+        mainPageMargin: 0,
+        bodyPaddingTop: 0,
 
-$('#fireworks').on('click', function () {
-    $(this).toggleClass('blueShadow');
-    $( "#force" ).empty();
-    if ($(this).hasClass('blueShadow')) {
-      $( '#name' ).html("<span style='color:red'>P</span><span style='color:white'>e</span><span style='color:blue'>t</span><span style='color:red'>e</span><span style='color:white'>r</span> <span style='color:blue'>D</span><span style='color:red'>u</span><span style='color:white'>l</span><span style='color:blue'>w</span><span style='color:red'>o</span><span style='color:white'>r</span><span style='color:blue'>t</span><span style='color:red'>h</span>");
-      forceLayout(true);
-    } else {
-      $( '#name' ).html("Peter Dulworth");
-      forceLayout(false);
-    }
-});
+        init: function () {
+            this.cacheDom();
+            this.render();
+            this.bindEvents();
+            // setInterval(function() {
+            // if(this.$downArrowWrapper.is(':visible') &&  !(this.$downArrow.is(":hover"))) {
+            //         this.$downArrowWrapper.effect( 'bounce', { times: 3 }, 800);
+            //     }
+            // }, 10000);
+        },
+        cacheDom: function () {
+            this.$nav = $('nav');
+            this.$downArrowWrapper = $("#down-arrow-wrapper");
+            this.$downArrow = $("#down-arrow");
+            this.$gearWrapper = $('#gear-wrapper');
+            this.$body = $('body');
+            this.$gap = $('#main-page-margin');
+            this.$window = $(window);
+            this.$fireworks = $('#fireworks');
+            this.educationNavBtn = $('#education-nav-btn');
+            this.extracurricularNavBtn = $('#extracurricular-nav-btn');
+            this.experienceNavBtn = $('#experience-nav-btn');
+            this.$thomasCardTxtWrapper = $('#thomas-card-text-wrapper');
+            this.$thomasCardTxt = this.$thomasCardTxtWrapper.find('#thomas-card-text');
+            this.$riceCardTxtWrapper = $('#rice-card-text-wrapper');
+            this.$riceCardTxt = this.$riceCardTxtWrapper.find('#rice-card-text');
+            this.$discoCardTxtWrapper = $('#disco-card-text-wrapper'); this.$discoCardTxt = this.$discoCardTxtWrapper.find('#disco-card-text');
+            this.$hcyaCardTxtWrapper = $('#hcya-card-text-wrapper'); this.$hcyaCardTxt = this.$hcyaCardTxtWrapper.find('#hcya-card-text');
+            this.$brevitestCardTxtWrapper = $('#brevitest-card-text-wrapper'); this.$brevitestCardTxt = this.$brevitestCardTxtWrapper.find('#brevitest-card-text');
+        },
+        bindEvents: function () {
+            this.$window.on('scroll touchmove', this.windowScroll.bind(this));
+            this.$window.on('resize', this.windowResize.bind(this));
+            this.$downArrow.on('mouseenter', this.downArrowMouseEnter.bind(this));
+            this.$downArrowWrapper.on('click', {scrollTop: this.mainPageMargin + 1, duration: 800}, this.scrollToVal.bind(this));
+            this.educationNavBtn.on('click', {scrollTop: this.mainPageMargin + 1, duration: 800}, this.scrollToVal.bind(this));
+            this.extracurricularNavBtn.on('click', {scrollTop: $("#extracurricular").offset().top - this.$nav.outerHeight() - 20, duration: 800}, this.scrollToVal.bind(this));
+            this.experienceNavBtn.on('click', {scrollTop: $("#experience").offset().top - this.$nav.outerHeight() - 20, duration: 800}, this.scrollToVal.bind(this));
+
+            this.$thomasCardTxtWrapper.on('mouseenter', {arrowState: this.thomasArrowState, cardWrapper: this.$thomasCardTxtWrapper}, this.cardMouseEnter.bind(this));
+            this.$thomasCardTxtWrapper.on('mouseleave', {arrowState: this.thomasArrowState, cardWrapper: this.$thomasCardTxtWrapper}, this.cardMouseLeave.bind(this));
+            this.$thomasCardTxtWrapper.on('click',      {arrowState: this.thomasArrowState, cardTxt: this.$thomasCardTxt}, this.cardClick.bind(this));
+
+            this.$riceCardTxtWrapper.on('mouseenter', {arrowState: this.riceArrowState, cardWrapper: this.$riceCardTxtWrapper}, this.cardMouseEnter.bind(this));
+            this.$riceCardTxtWrapper.on('mouseleave', {arrowState: this.riceArrowState, cardWrapper: this.$riceCardTxtWrapper}, this.cardMouseLeave.bind(this));
+            this.$riceCardTxtWrapper.on('click',      {arrowState: this.riceArrowState, cardTxt: this.$riceCardTxt}, this.cardClick.bind(this));
+
+            this.$discoCardTxtWrapper.on('mouseenter', {arrowState: this.discoArrowState, cardWrapper: this.$discoCardTxtWrapper}, this.cardMouseEnter.bind(this));
+            this.$discoCardTxtWrapper.on('mouseleave', {arrowState: this.discoArrowState, cardWrapper: this.$discoCardTxtWrapper}, this.cardMouseLeave.bind(this));
+            this.$discoCardTxtWrapper.on('click',      {arrowState: this.discoArrowState, cardTxt: this.$discoCardTxt}, this.cardClick.bind(this));
+
+            this.$hcyaCardTxtWrapper.on('mouseenter', {arrowState: this.hcyaArrowState, cardWrapper: this.$hcyaCardTxtWrapper}, this.cardMouseEnter.bind(this));
+            this.$hcyaCardTxtWrapper.on('mouseleave', {arrowState: this.hcyaArrowState, cardWrapper: this.$hcyaCardTxtWrapper}, this.cardMouseLeave.bind(this));
+            this.$hcyaCardTxtWrapper.on('click',      {arrowState: this.hcyaArrowState, cardTxt: this.$hcyaCardTxt}, this.cardClick.bind(this));
+
+            this.$brevitestCardTxtWrapper.on('mouseenter', {arrowState: this.brevitestArrowState, cardWrapper: this.$brevitestCardTxtWrapper}, this.cardMouseEnter.bind(this));
+            this.$brevitestCardTxtWrapper.on('mouseleave', {arrowState: this.brevitestArrowState, cardWrapper: this.$brevitestCardTxtWrapper}, this.cardMouseLeave.bind(this));
+            this.$brevitestCardTxtWrapper.on('click',      {arrowState: this.brevitestArrowState, cardTxt: this.$brevitestCardTxt}, this.cardClick.bind(this));
+
+            this.$fireworks.on('click', this.fireworks.bind(this));
+        },
+        render: function () {
+            this.mainPageMargin = ($( window ).height() - this.$nav.outerHeight());
+            this.$gap.css('height', this.mainPageMargin);
+            this.$downArrowWrapper.effect( 'bounce', { times: 3 }, 1000);
+        },
+        windowScroll: function () {
+            if (this.$window.scrollTop() > this.mainPageMargin) {
+                document.styleSheets[3].disabled = false;
+                this.bodyPaddingTop = parseFloat(this.$nav.outerHeight() + 20);
+                this.$nav.addClass('navbar-fixed-top');
+                this.$body.css('padding-top', this.bodyPaddingTop + 'px');
+            } else {
+                document.styleSheets[3].disabled = true;
+                this.$nav.removeClass('navbar-fixed-top');
+                this.$body.css('padding-top', 0);
+            }
+
+            if (this.$window.scrollTop() > ((3/4)*this.mainPageMargin)) {
+                this.$gearWrapper.show();
+            } else {
+                this.$gearWrapper.hide();
+            }
+
+            if (this.$window.scrollTop() !== 0) {
+                this.$downArrowWrapper.hide();
+            } else {
+                this.$downArrowWrapper.show();
+                this.$downArrowWrapper.effect( 'bounce', { times: 3 }, 800);
+            }
+        },
+        windowResize: function (e) {
+            this.mainPageMargin = (this.$window.height() - this.$nav.outerHeight());
+            this.$gap.css('height', this.mainPageMargin);
+            $( "#force" ).empty();
+            $( "#gear-wrapper" ).empty();
+            forceLayout();
+            gearLayout();
+        },
+        fireworks: function (e) {
+            this.$fireworks.toggleClass('blueShadow');
+            $("#force").empty();
+            if (this.$fireworks.hasClass('blueShadow')) {
+              $( '#name' ).html("<span style='color:red'>P</span><span style='color:white'>e</span><span style='color:blue'>t</span><span style='color:red'>e</span><span style='color:white'>r</span> <span style='color:blue'>D</span><span style='color:red'>u</span><span style='color:white'>l</span><span style='color:blue'>w</span><span style='color:red'>o</span><span style='color:white'>r</span><span style='color:blue'>t</span><span style='color:red'>h</span>");
+              forceLayout(true);
+            } else {
+              $( '#name' ).html("Peter Dulworth");
+              forceLayout(false);
+            }
+        },
+        scrollToVal: function (e) {
+            console.log(e.data.scrollTop);
+            $('html, body').animate({
+                scrollTop: e.data.scrollTop
+            }, e.data.duration);
+        },
+        downArrowMouseEnter: function (e) {
+            this.$downArrowWrapper.effect( 'bounce', { times: 3 }, 800);
+        },
+        cardMouseEnter: function (e) {
+            $(e.data.arrowState.pos, e.data.arrowState.context).show();
+            e.data.cardWrapper.toggleClass('cursor-hand');
+        },
+        cardMouseLeave: function (e) {
+            $(e.data.arrowState.pos, e.data.arrowState.context).hide();
+            e.data.cardWrapper.toggleClass('cursor-hand');
+        },
+        cardClick: function (e) {
+            this.e = e.data;
+            e.data.cardTxt.slideToggle(200, this.cardClickToggle.bind(this));
+        },
+        cardClickToggle: function () {
+            if (this.e.cardTxt.is(':visible')) {
+                this.e.arrowState.pos = '.card-header-arrow-up';
+                this.e.arrowState.neg = '.card-header-arrow-down';
+            }
+            else {
+                this.e.arrowState.pos = '.card-header-arrow-down';
+                this.e.arrowState.neg = '.card-header-arrow-up';
+            }
+            $(this.e.arrowState.pos, this.e.arrowState.context).show();
+            $(this.e.arrowState.neg, this.e.arrowState.context).hide();
+        }
+    };
+
+    app.init();
+
+})();
