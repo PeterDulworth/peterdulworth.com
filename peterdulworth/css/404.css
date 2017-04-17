@@ -48,8 +48,8 @@ html, body, .nameContainer {
 }
 
 .nameContainer {
-  color: #eeeeee;
-  text-shadow: 2px 2px #cccccc;
+  color: #ffaaaa;
+  text-shadow: 2px 2px #ffdddd;
   display: -webkit-box;  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
   display: -ms-flexbox;  /* TWEENER - IE 10 */
   display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */

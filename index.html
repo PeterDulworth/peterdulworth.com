@@ -1,30 +1,45 @@
 <!doctype html>
 <html>
   <head>
-    <title>Peter Dulworth</title>
+    <title>Petr Dulworth</title>
+
     <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui" />
+
+    <meta name="viewport"                     content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="google-site-verification" content="zcEfgZeW0h67OUV7davoipetX_zZ_4IvLO28B2nwjBE"/>
-    <meta name="description" content="Dual Credit Student at Rice University and the University of St.Thomas. T&amp;F/XC - HCYA Lions. Homeschool HS Senior. Intern at BreviTest Technologies LLC." />
-    <meta name="keywords" content="Robotics, HCYA, Cross Country, Track, 2587z, Discobots, Dual Credit, Univeristy of St. Thomas" />
-    <link rel="icon" href="peterdulworth/imgs/favicon.ico"/>
-    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lato&amp;subset=latin,latin-ext" />
-    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />
-    <link rel="stylesheet" type="text/css" href="peterdulworth/css/index.css" />
-    <link rel="stylesheet" type="text/css" href="peterdulworth/css/alternateNav.css"/>
+    <meta name="google-site-verification"     content="zcEfgZeW0h67OUV7davoipetX_zZ_4IvLO28B2nwjBE"/>
+    <meta name="description"                  content="Dual Credit Student at Rice University and the University of St.Thomas. T&amp;F/XC - HCYA Lions. Homeschool HS Senior. Intern at BreviTest Technologies LLC." />
+    <meta name="keywords"                     content="Robotics, HCYA, Cross Country, Track, 2587z, Discobots, Dual Credit, Univeristy of St. Thomas" />
+
+    <link rel="icon"                       href="peterdulworth/imgs/favicon.ico"/>
+    <link rel="stylesheet"                 href="http://fonts.googleapis.com/css?family=Lato&amp;subset=latin,latin-ext" /> <!-- load lato font -->
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />  <!-- load bootstrap css -->
+    <link rel="stylesheet" type="text/css" href="peterdulworth/css/index.css" />                                            <!-- load user css -->
+    <link rel="stylesheet" type="text/css" href="peterdulworth/css/alternateNav.css"/>                                      <!-- load css for blue navigation -->
+
     <script>document.styleSheets[3].disabled = true;</script>
   </head>
   <body>
 
     <div style="position:relative;">
-      <div id="force" style="position: absolute; width: 100vw; height: 100vh;"></div>
-    </div>
-    <div style="position:relative;" class="mouse-ignore">
-      <div id="name">Peter Dulworth</div>
+      <div id="cy"></div>
     </div>
     <div style="position:relative;">
-      <div id="fireworks" class="cursor-hand"><div class="glyphicon glyphicon-fire"></div>FireWorks</div>
+      <div id="force" style="position: absolute; width: 100vw; height: 100vh; display:none;"></div>
+    </div>
+    <!-- <div id="cy"></div> -->
+    <!-- <div style="position:relative;" class="mouse-ignore">
+      <div id="name"><span class="color_1">P</span><span class="color_2">e</span><span class="color_3">t</span><span class="color_1"></span><span class="color_2">r</span><span class="color_1"> D</span><span class="color_2">u</span><span class="color_3">l</span><span class="color_1">w</span><span class="color_2">o</span><span class="color_3">r</span><span class="color_1">t</span><span class="color_2">h</span></div>
+    </div> -->
+    <div style="position:relative;" class="mouse-ignore">
+      <div id="name" style="display:none">Peter Dulworth</div>
+      <div id="img" style="position: absolute; z-index: -1; display:none;">
+        <img style="opacity: 0.5" src="http://www.peterdulworth.com/peterdulworth/imgs/tongue.jpg" alt="">
+        <img style="opacity: 0.5" src="http://www.peterdulworth.com/peterdulworth/imgs/franzz.jpg" alt="">
+      </div>
+    </div>
+    <div style="position:relative;">
+      <div id="fireworks" class="cursor-hand">lets git lit fam</div>
     </div>
     <div style="position:relative;">
       <div id="down-arrow-wrapper"><div id="down-arrow" class="glyphicon glyphicon-menu-down"></div></div>
@@ -35,10 +50,11 @@
 
     <!-- *************************************************************** NAVIGATION *************************************************************** -->
 
+    <!-- <div style="position:fixed; height: 4.6vh; border: 1px solid blue; bottom: 0; z-index: 100000; width: 100%; "></div> -->
     <div class="container-fluid">
       <div class="row">
         <div id="main-page-margin"style="height:96.4vh;"></div>
-        <nav class="navbar navbar-default">
+        <!-- <nav class="navbar navbar-default">
           <div class="navbar-collapses">
             <ul class="nav navbar-nav">
               <li><a id="education-nav-btn"       style="cursor: pointer;">Education</a></li>
@@ -46,6 +62,13 @@
               <li><a id="experience-nav-btn"      style="cursor: pointer;">Experience</a></li>
             </ul>
           </div>
+        </nav> -->
+        <nav>
+          <ul>
+            <li><a id="education-nav-btn"       style="cursor: pointer;">Education</a></li>
+            <li><a id="extracurricular-nav-btn" style="cursor: pointer;">Extracurricular</a></li>
+            <li><a id="experience-nav-btn"      style="cursor: pointer;">Experience</a></li>
+          </ul>
         </nav>
       </div> <!-- row -->
     </div> <!-- container fluid -->
@@ -62,10 +85,10 @@
         </div> <!-- column -->
       </div> <!-- row -->
 
-      <div class="row">
+      <!-- <div class="row">
         <div class="col-xs-12" style="height:auto;">
           <div class="card" id="thomas">
-            <img class="displayed shadowed" src="peterdulworth/imgs/logos/thomas.png" alt="University of St. Thomas" style="width:15vw;"><hr/>
+            <img class="displayed shadowed" src="peterdulworth/imgs/logos/min/thomas.png" alt="University of St. Thomas" style="width:15vw;"><hr/>
             <div id="thomas-card-text-wrapper">
 
               <div class="row">
@@ -82,18 +105,17 @@
                 </div>
               </div>
 
-              <p id="thomas-card-text" class="card-text">Dual-credit student at the University of St. Thomas since freshman year.</p>
+              <p id="thomas-card-text" class="card-text">Dual-credit student at the University of St. Thomas</p>
             </div>
-          </div>
-        </div> <!-- column -->
-      </div> <!-- row -->
+          </div> -->
+        <!-- </div> --> <!-- column -->
+      <!-- </div> --> <!-- row -->
 
       <div class="row">
         <div class="col-xs-12" style="height:auto;">
           <div class="card" id="rice">
-            <img class="displayed shadowed" src="peterdulworth/imgs/logos/rice2.png" alt="Rice University" style="width:30vw;"><hr/>
+            <img class="displayed shadowed" src="peterdulworth/imgs/logos/min/rice.png" alt="Rice University" style="width:30vw;"><hr/>
             <div id="rice-card-text-wrapper">
-              <!-- <div><div class="card-header-wrapper"><div class="card-header" style="background-color:#003b76; color:#003b76;">2015-16</div></div><div class="glyphicon glyphicon-menu-down card-header-arrow pull-right"></div></div> -->
 
               <div class="row">
                 <div class="col-xs-2 pull-left" style="text-align:left;">
@@ -101,14 +123,14 @@
                   <div class="glyphicon glyphicon-menu-up card-header-arrow-up"></div>
                 </div>
                 <div class="col-xs-4 col-xs-offset-2">
-                  <div class="card-header-wrapper"><div class="card-header" style="background-color:#003b76; color:#003b76;">2015-16</div></div>
+                  <div class="card-header-wrapper"><div class="card-header" style="background-color:#003b76; color:#003b76;">2016-20</div></div>
                 </div>
                 <div class="col-xs-2 pull-right" style="text-align:right;">
                   <div class="glyphicon glyphicon-menu-down card-header-arrow-down"></div>
                   <div class="glyphicon glyphicon-menu-up card-header-arrow-up"></div>
                 </div>
               </div>
-              <p id="rice-card-text" class="card-text">Dual-credit student at Rice University starting senior year.</p>
+              <p id="rice-card-text" class="card-text">struglin math & computer science undergrad \n luay is pretty cool</p>
 
             </div>
           </div>
@@ -128,7 +150,7 @@
       <div class="row">
         <div class="col-xs-12" style="height:auto;">
           <div class="card" id="disco">
-            <a href="http://2015.discobots.org/" target="_blank"><img class="displayed" src="peterdulworth/imgs/logos/disco.png" alt="University of St. Thomas" style="width:25vw;"></a><hr/>
+            <a href="http://discoalliance.org/" target="_blank"><img class="displayed" src="peterdulworth/imgs/logos/disco2.png" alt="Discobots 2587" style="width:25vw;"></a><hr/>
             <div id="disco-card-text-wrapper">
               <div class="row">
                 <div class="col-xs-2 pull-left" style="text-align:left;">
@@ -136,14 +158,21 @@
                   <div class="glyphicon glyphicon-menu-up card-header-arrow-up"></div>
                 </div>
                 <div class="col-xs-4 col-xs-offset-2">
-                  <div class="card-header-wrapper"><div class="card-header" style="background-color:#698edc; color:#698edc;">2010-15</div></div>
+                  <div class="card-header-wrapper"><div class="card-header" style="background-color:#698edc; color:#698edc;">2009-16</div></div>
                 </div>
                 <div class="col-xs-2 pull-right" style="text-align:right;">
                   <div class="glyphicon glyphicon-menu-down card-header-arrow-down"></div>
                   <div class="glyphicon glyphicon-menu-up card-header-arrow-up"></div>
                 </div>
               </div>
-              <p id="disco-card-text" class="card-text">A Houston area robotics club competing in VEX and FRC.</p>
+              <p id="disco-card-text" class="card-text"><a href="http://www.discoalliance.org" style="text-decoration:none">Discobots: </a>3x world finalist in the vex robotics competition.
+                <br>Robots:
+                <br><a target="_blank" href="https://www.youtube.com/watch?v=sazIDRkIyKI&ab_channel=peter_2587z">2016 - Klay</a>
+                <br><a target="_blank" href="https://www.youtube.com/watch?v=ytjvI5y4Y9Q&ab_channel=DiscoBots">2015 - TARs</a>
+                <br><a target="_blank" href="https://www.youtube.com/watch?v=8CtCmY-7vBs&ab_channel=DiscoBots">2014 - Oatmeal</a>
+                <br><a target="_blank" href="https://www.youtube.com/watch?v=Vk08717qa68&ab_channel=DiscoBots">2013 - Kiwi</a>
+                <br><a target="_blank" href="https://www.youtube.com/watch?v=eeotmT4Wx1g&ab_channel=DiscoBots">2013 - MINI dragon</a>
+              </p>
             </div>
           </div>
         </div> <!-- column -->
@@ -152,7 +181,7 @@
       <div class="row">
         <div class="col-xs-12" style="height:auto;">
           <div class="card" id="hcya">
-            <a href="http://hcyalions.com/" target="_blank"><img class="displayed shadowed" src="peterdulworth/imgs/logos/hcya-white.png" alt="University of St. Thomas" style="width:15vw;"></a><hr/>
+            <a href="http://hcyalions.com/" target="_blank"><img class="displayed shadowed" src="peterdulworth/imgs/logos/min/hcya-white.png" alt="HCYA Lions" style="width:15vw;"></a><hr/>
             <div id="hcya-card-text-wrapper">
               <div class="row">
                 <div class="col-xs-2 pull-left" style="text-align:left;">
@@ -160,14 +189,14 @@
                   <div class="glyphicon glyphicon-menu-up card-header-arrow-up"></div>
                 </div>
                 <div class="col-xs-4 col-xs-offset-2">
-                  <div class="card-header-wrapper"><div class="card-header" style="background-color:#3e0000; color:#3e0000;">2010-15</div></div>
+                  <div class="card-header-wrapper"><div class="card-header" style="background-color:#3e0000; color:#3e0000;">2010-16</div></div>
                 </div>
                 <div class="col-xs-2 pull-right" style="text-align:right;">
                   <div class="glyphicon glyphicon-menu-down card-header-arrow-down"></div>
                   <div class="glyphicon glyphicon-menu-up card-header-arrow-up"></div>
                 </div>
               </div>
-              <p id="hcya-card-text" class="card-text"><b>HCYA</b> (<b>H</b>omeschool <b>C</b>hristian <b>Y</b>outh <b>A</b>ssociation)</p>
+              <p id="hcya-card-text" class="card-text"><b>HCYA</b> (<b>H</b>omeschool <b>C</b>hristian <b>Y</b>outh <b>A</b>ssociation) <br/> Track & Field and Cross Country</p>
             </div>
           </div>
         </div> <!-- column -->
@@ -186,7 +215,7 @@
       <div class="row">
         <div class="col-xs-12" style="height:auto;">
           <div class="card" id="brevitest">
-            <a href="http://brevitest.com/" target="_blank"><img class="displayed" src="peterdulworth/imgs/logos/brevitestcopy.png" alt="BreviTest Technologies LLC." style="width:15vw;"></a><hr/>
+            <a href="http://brevitest.com/" target="_blank"><img class="displayed" src="peterdulworth/imgs/logos/min/brevitest.png" alt="BreviTest Technologies LLC." style="width:15vw;"></a><hr/>
             <div id="brevitest-card-text-wrapper">
               <div class="row">
                 <div class="col-xs-2 pull-left" style="text-align:left;">
@@ -194,14 +223,52 @@
                   <div class="glyphicon glyphicon-menu-up card-header-arrow-up"></div>
                 </div>
                 <div class="col-xs-4 col-xs-offset-2">
-                  <div class="card-header-wrapper"><div class="card-header" style="background-color:#060a4a; color:#060a4a;">2014-15</div></div>
+                  <div class="card-header-wrapper"><div class="card-header" style="background-color:#060a4a; color:#060a4a;">2014-16</div></div>
                 </div>
                 <div class="col-xs-2 pull-right" style="text-align:right;">
                   <div class="glyphicon glyphicon-menu-down card-header-arrow-down"></div>
                   <div class="glyphicon glyphicon-menu-up card-header-arrow-up"></div>
                 </div>
               </div>
-              <p id="brevitest-card-text" class="card-text">Intern at BreviTest Technologies LLC. Role: Chief Coffee Executive. Duties: getting coffee, web developement using the MEAN stack.</p>
+              <p id="brevitest-card-text" class="card-text">For the past three summers I’ve interned at BreviTest Technologies
+                LLC., a company that is developing a rapid, point-of-care device which
+                accurately automates enzyme immunoassays. My role has been to work
+                on the back-end (using the javascript MEAN stack) of a website which
+                connects the device to both the users and the company.</p>
+            </div>
+          </div>
+        </div> <!-- column -->
+      </div> <!-- row -->
+
+      <!-- *************************************************************** Aspirations *************************************************************** -->
+
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="card-divider" id="experience">
+            A<sup>*</sup>SPIRATIONS
+          </div>
+        </div> <!-- column -->
+      </div> <!-- row -->
+
+      <div class="row">
+        <div class="col-xs-12" style="height:auto;">
+          <div class="card" id="brevitest">
+            <a href="http://brevitest.com/" target="_blank"><img class="displayed" src="peterdulworth/imgs/logos/luayn.jpg" alt="BreviTest Technologies LLC." style="width:15vw; border-radius: 10%;"></a><hr/>
+            <div id="brevitest-card-text-wrapper">
+              <div class="row">
+                <div class="col-xs-2 pull-left" style="text-align:left;">
+                  <div class="glyphicon glyphicon-menu-down card-header-arrow-down"></div>
+                  <div class="glyphicon glyphicon-menu-up card-header-arrow-up"></div>
+                </div>
+                <div class="col-xs-4 col-xs-offset-2">
+                  <div class="card-header-wrapper"><div class="card-header" style="background-color:#060a4a; color:#060a4a;">float('inf')</div></div>
+                </div>
+                <div class="col-xs-2 pull-right" style="text-align:right;">
+                  <div class="glyphicon glyphicon-menu-down card-header-arrow-down"></div>
+                  <div class="glyphicon glyphicon-menu-up card-header-arrow-up"></div>
+                </div>
+              </div>
+              <p id="brevitest-card-text" class="card-text">Intern at BreviTest Technologies LLC.</p>
             </div>
           </div>
         </div> <!-- column -->
@@ -217,31 +284,48 @@
       <div class="container">
         <div class="row">
 
-          <div class="col-sm-12 col-md-6">
+          <div class="col-sm-12 col-md-3">
+            <div class="h2" style="text-align:center; width: 100%;">Featring</div>
+            <dl class="dl-horizontal">
+              <dt>Sophia</dt><dd>Jeffrson</dd>
+              <dt>Travis</dt><dd>BeneDICt</dd>
+              <dt>dat</dt><dd>bo iii</dd>
+            </dl>
+          </div>
+
+          <div class="col-sm-12 col-md-5">
             <div class="h2" style="text-align:center; width: 100%;">Links</div>
             <dl class="dl-horizontal">
               <dt>Github</dt><dd><a   href="https://github.com/PeterDulworth">https://github.com/PeterDulworth</a></dd>
-              <dt>Facebook</dt><dd><a href="https://www.facebook.com/peter.dulworth">https://www.facebook.com/peter.dulworth</a></dd>
-              <dt>Youtube</dt><dd><a  href="https://www.youtube.com/channel/UCoP4ojPfGae2jJ5u_-Uoobw">https://www.youtube.com/channel/peterdulworth</a></dd>
+              <dt>LinkedIn</dt><dd><a href="https://www.linkedin.com/in/peter-dulworth">https://www.linkedin.com/in/peter-dulworth</a></dd>
+              <dt>Resume</dt><dd><a  href="http://www.peterdulworth.com/peterdulworth/files/peter-dulworth-resume.pdf">http://www.peterdulworth.com/resume</a></dd>
             </dl>
-          </div> <!-- column -->
+          </div>
 
-          <div class="col-sm-12 col-md-6">
+          <div class="col-sm-12 col-md-4">
             <div class="h2" style="text-align:center; width: 100%;">Contact</div>
             <dl class="dl-horizontal">
               <dt>Peter</dt><dd>Dulworth</dd>
               <dt>Phone</dt><dd>(832)-567-5653</dd>
-              <dt>Email</dt><dd>peter.dulworth@gmail.com</dd>
+              <dt>Email</dt><dd>psd2@rice.edu</dd>
             </dl>
-          </div> <!-- column -->
+          </div>
 
         </div> <!-- row -->
       </div> <!-- container -->
     </div> <!-- footer -->
+    <body>
+    <div id="embed"></div>
+</body>
 
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>      <!-- jquery -->
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script> <!-- jquery-ui -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>      <!-- jquery -->
+    <script type="text/javascript" src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script> <!-- jquery-ui -->
+    <script type="text/javascript" src="https://code.jquery.com/color/jquery.color-2.1.2.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>              <!-- d3 -->
+    <!-- <script type="text/javascript" src="http://cytoscape.github.io/cytoscape.js/api/cytoscape.js-latest/cytoscape.min.js"></script> -->
+    <script type="text/javascript" src="http://www.peterdulworth.com/peterdulworth/js/cytoscape.min.js"></script>
     <script type="text/javascript" src="peterdulworth/js/index.js"></script>                                              <!-- local js -->
+    <script type="text/javascript" src="peterdulworth/js/graph.js"></script>
+
   </body>
 </html>
